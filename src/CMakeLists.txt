@@ -1,6 +1,10 @@
 add_library(espeak-include INTERFACE)
 target_include_directories(espeak-include INTERFACE include include/compat)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/src)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/src)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/src)
+
 add_subdirectory(ucd-tools)
 if(USE_SPEECHPLAYER)
   add_subdirectory(speechPlayer)
