@@ -1,4 +1,4 @@
-add_library(ucd
+add_library(ucd STATIC
   src/case.c
   src/categories.c
   src/ctype.c
